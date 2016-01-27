@@ -1,9 +1,11 @@
 # My Unicorn Name
 # v. 0.0.1
 
-i = 0
+# initialize variables
 user_first = ""
 user_last = ""
+
+# Hash of Unicorn First Names
 unicorn_first = {
     "a" => "Apples",
     "b" => "Butterscotch",
@@ -33,6 +35,7 @@ unicorn_first = {
     "z" => "Zip"
 }
 
+# Hash of Unicorn Last Names
 unicorn_last = {
     "a" => "Ambersand",
     "b" => "Brittleswitch",
@@ -62,21 +65,33 @@ unicorn_last = {
     "z" => "Zandywich"
 }
 
+# Initialize App
+
+def initApp
+    system("clear")
+    puts "= " * 40
+    puts "* * * My Unicorn Name * * *"
+    puts "= " * 40
+end
 
 
-puts "My Unicorn Name"
-puts "Please enter your first name: "
-user_first = gets.chomp.downcase.to_s
-puts "Please enter your last name: "
-user_last = gets.chomp.downcase.to_s
+def generateUnicornName(user_first,user_last,unicorn_first,unicorn_last)
 
-puts "Your Unicorn name is "
-
-
+    print "Please enter your first name: "    
+    user_first = gets.chomp.downcase.to_s
+    print "Please enter your last name: "
+    user_last = gets.chomp.downcase.to_s
+    
+    puts "- " * 40
+    puts "Your Unicorn name is "
+        
     first_char = user_first.scan(/(\A\w|(?<=\s)\w)/).flatten.join
     last_char = user_last.scan(/(\A\w|(?<=\s)\w)/).flatten.join
     
-    puts first_char + " " + last_char
-    
     puts unicorn_first["#{first_char}"] + " " + unicorn_last["#{last_char}"]
-    
+    puts "= " * 40
+
+end
+
+initApp
+generateUnicornName(user_first,user_last,unicorn_first,unicorn_last)

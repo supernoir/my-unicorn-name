@@ -5,91 +5,63 @@ i = 0
 user_first = ""
 user_last = ""
 unicorn_first = {
-    :a => "Apples",
-    :b => "Butterscotch",
-    :c => "Coco",
-    :d => "Dipsy",
-    :e => "Emerald",
-    :f => "Foxy",
-    :g => "Ginger",
-    :h => "Huffy",
-    :i => "Itsy",
-    :j => "Jelly",
-    :k => "Kip",
-    :l => "Lemon",
-    :m => "Merry",
-    :n => "Nibles",
-    :o => "Orby",
-    :p => "Patsy",
-    :q => "Quibs",
-    :r => "Ruby",
-    :s => "Sissy",
-    :t => "Tuffy",    
-    :u => "Umphry",
-    :v => "Villy",
-    :w => "Wanita",
-    :x => "Xenia",
-    :y => "Yule",
-    :z => "Zip"
+    "a" => "Apples",
+    "b" => "Butterscotch",
+    "c" => "Coco",
+    "d" => "Dipsy",
+    "e" => "Emerald",
+    "f" => "Foxy",
+    "g" => "Ginger",
+    "h" => "Huffy",
+    "i" => "Itsy",
+    "j" => "Jelly",
+    "k" => "Kip",
+    "l" => "Lemon",
+    "m" => "Merry",
+    "n" => "Nibles",
+    "o" => "Orby",
+    "p" => "Patsy",
+    "q" => "Quibs",
+    "r" => "Ruby",
+    "s" => "Sissy",
+    "t" => "Tuffy",    
+    "u" => "Umphry",
+    "v" => "Villy",
+    "w" => "Wanita",
+    "x" => "Xenia",
+    "y" => "Yule",
+    "z" => "Zip"
 }
 
 unicorn_last = {
-    :a => "Ambersand",
-    :b => "Brittleswitch",
-    :c => "Cookies",
-    :d => "Dandylion",
-    :e => "Evergreene",
-    :f => "Fuchsian",
-    :g => "Glitterish",
-    :h => "Hashbrowney",
-    :i => "Icepokes",
-    :j => "Jazzwings",
-    :k => "Kandykorn",
-    :l => "Lolipups",
-    :m => "Marmlehump",
-    :n => "Nanabreade",
-    :o => "O'Haythere",
-    :p => "Purplepaws",
-    :q => "Qewtipie",
-    :r => "Razzberry",
-    :s => "Shweethearth",
-    :t => "Tenderkisz",
-    :u => "Upindowne",
-    :v => "Von Darebarr",
-    :w => "Waughtermellin",
-    :x => "Xelsiora",
-    :y => "Yellowbows",
-    :z => "Zandywich"
+    "a" => "Ambersand",
+    "b" => "Brittleswitch",
+    "c" => "Cookies",
+    "d" => "Dandylion",
+    "e" => "Evergreene",
+    "f" => "Fuchsian",
+    "g" => "Glitterish",
+    "h" => "Hashbrowney",
+    "i" => "Icepokes",
+    "j" => "Jazzwings",
+    "k" => "Kandykorn",
+    "l" => "Lolipups",
+    "m" => "Marmlehump",
+    "n" => "Nanabreade",
+    "o" => "O'Haythere",
+    "p" => "Purplepaws",
+    "q" => "Qewtipie",
+    "r" => "Razzberry",
+    "s" => "Shweethearth",
+    "t" => "Tenderkisz",
+    "u" => "Upindowne",
+    "v" => "Von Darebarr",
+    "w" => "Waughtermellin",
+    "x" => "Xelsiora",
+    "y" => "Yellowbows",
+    "z" => "Zandywich"
 }
-[
-    
-    
-    { :a => "Apples", :a => "Ambersand"},
-    {:first => "Butterscotch", :last => "Brittleswitch"},
-    {:first => "Coco", :last => "Cookies"},   
-    {:first => "Dipsy", :last => "Dandylion"},   
-    {:first => "Emerald", :last => "Evergreene"},
-    {:first => "Foxy", :last => "Fuchsian"},
-    {:first => "Ginger", :last => "Glitterish"},
-    {:first => "Huffy", :last => "Hashbrown"},
-    {:first => "Itsy", :last => "Icepokes"},
-    {:first => "Jelly", :last => "Jazzwings"},
-    {:first => "Kip", :last => "Kandykorn"},
-    {:first => "Lemon", :last => "Lolipups"},
-    {:first => "Merry", :last => "Marmlehump"},
-    {:first => "Nibles", :last => "Nanabreade"},
-    {:first => "Orby", :last => "O'Haythere"},
-    {:first => "Patsy", :last => "Purplepans"},
-    {:first => "Quibs", :last => "Queentea"},
-    {:first => "Ruby", :last => "Razzberry"},
-    {:first => "Sissy", :last => "Sweethearth"},
-    {:first => "Tuffy", :last => "Tenderkitz"},
-    {:first => "Umphry", :last => "Upindowne"}, 
-    {:first => "Villy", :last => "Von der Bar"},
-    {:first => "Wanita", :last => "Waughtermellin"},
-    {:first => "Xenia", :last => "Xuperkute"},
-    {:first => "Zip", :last => "Zandywich"}                                                                                                                             
-]
+
 
 
 puts "My Unicorn Name"
@@ -104,7 +76,7 @@ puts "Your Unicorn name is "
     first_char = user_first.scan(/(\A\w|(?<=\s)\w)/).flatten.join
     last_char = user_last.scan(/(\A\w|(?<=\s)\w)/).flatten.join
     
-    
     puts first_char + " " + last_char
-    puts unicorn_names[rand(26)][:first] + " " + unicorn_names[rand(26)][:last]
+    
+    puts unicorn_first["#{first_char}"] + " " + unicorn_last["#{last_char}"]
     
